@@ -1,7 +1,7 @@
-Model,Best CV ROC-AUC,Best Parameters
-Logistic Regression,0.9798372220099509,"{'C': 0.01, 'solver': 'lbfgs'}"
-Decision Tree,0.9634649279577978,"{'criterion': 'gini', 'max_depth': 10, 'min_samples_leaf': 10, 'min_samples_split': 2}"
-Random Forest,0.982295736629978,"{'max_depth': None, 'max_features': 'log2', 'min_samples_leaf': 2, 'min_samples_split': 5, 'n_estimators': 100}"
-KNN,0.9734772944835435,"{'metric': 'manhattan', 'n_neighbors': 15, 'weights': 'distance'}"
-SVM,0.9817283554985847,"{'C': 0.1, 'gamma': 'scale', 'kernel': 'rbf'}"
-Naive Bayes,0.9597835241722439,{'var_smoothing': np.float64(1e-12)}
+Model,Best CV ROC-AUC,Best CV PR-AUC,Best Parameters
+Logistic Regression,0.9798372220099509,0.9851312062228882,"{'C': 0.01, 'solver': 'lbfgs'}"
+Decision Tree,0.9634649279577978,0.9637661841133969,"{'criterion': 'gini', 'max_depth': 10, 'min_samples_leaf': 10, 'min_samples_split': 2}"
+Random Forest,0.982295736629978,0.9863343316108614,"{'max_depth': None, 'max_features': 'log2', 'min_samples_leaf': 2, 'min_samples_split': 5, 'n_estimators': 100}"
+KNN,0.9734772944835435,0.9797600052382267,"{'metric': 'manhattan', 'n_neighbors': 15, 'weights': 'distance'}"
+SVM,0.9814682886946947,0.9859344708822254,"{'C': 1, 'gamma': 'scale', 'kernel': 'rbf'}"
+Naive Bayes,0.9597835241722439,0.9579257217313326,{'var_smoothing': 1e-11}
