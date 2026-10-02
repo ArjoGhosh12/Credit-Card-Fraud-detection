@@ -2,6 +2,7 @@ from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 import joblib
 import pandas as pd
+from pathlib import Path
 
 
 # --------------------------------------------------
@@ -22,7 +23,7 @@ app = FastAPI(
 app.add_middleware(
     CORSMiddleware,
     allow_origins=["*"],
-    allow_credentials=True,
+    allow_credentials=False,
     allow_methods=["*"],
     allow_headers=["*"],
 )
@@ -32,8 +33,10 @@ app.add_middleware(
 # Load trained pipeline
 # --------------------------------------------------
 
+BASE_DIR = Path(__file__).resolve().parent
+
 model = joblib.load(
-    "models/fraud_detection_pipeline.pkl"
+    BASE_DIR / "models" / "fraud_detection_pipeline.pkl"
 )
 
 
